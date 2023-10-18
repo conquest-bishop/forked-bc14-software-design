@@ -28,6 +28,22 @@ class Mouse extends InputDevice{
     }
 }
 
+abstract class OutputDevice{
+    abstract output(): any;
+}
+
+class Monitor extends OutputDevice{
+    output(){
+        console.log("Displays data on computer monitor");
+    }
+}
+
+class Speaker extends OutputDevice{
+    output(){
+        console.log("Outputing sound from speaker");
+    }
+}
+
 
 // Supertype / Contract
 class Computer{

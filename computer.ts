@@ -156,13 +156,15 @@ class OldModelComputer extends Computer{
 
 
 // Computer Objects
-let computer1 = new Computer(new Keyboard());
+let computer1 = new Computer(new Keyboard(), new Monitor());
 
 // Change inpute device dynamically using a setter
 computer1.setInputDevice(new Mouse());
+computer1.setOutputDevice(new Speaker());
 
 // Access the value of a private field using a getter
 console.log(computer1.getInputDevice());
+console.log(computer1.getOutputDevice());
 
 // Tests
 function testComputer(computer:Computer){
@@ -170,6 +172,6 @@ function testComputer(computer:Computer){
     computer.process();
     computer.store("any thing");
     computer.retrieve("name");
-    computer.output("just");
+    computer.output();
 }
 testComputer(computer1);

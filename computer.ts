@@ -55,10 +55,12 @@ class Computer{
         // public internalMemory = {}
 
     private inputDevice:InputDevice;
+    private outputDevice:OutputDevice;
 
     // Methods
-    constructor(inputDevice:InputDevice){
+    constructor(inputDevice:InputDevice, outputDevice:OutputDevice){
         this.inputDevice = inputDevice
+        this.outputDevice = outputDevice
     }
 
     // Input
@@ -73,6 +75,19 @@ class Computer{
     getInputDevice(){
         return this.inputDevice
     }
+
+    // output
+    output(){
+        this.outputDevice.output();
+     }
+ 
+     setOutputDevice(outputDevice:OutputDevice){
+         this.outputDevice = outputDevice;
+     }
+ 
+     getOutputDevice(){
+         return this.outputDevice
+     }
 
     // Process
     process(){
